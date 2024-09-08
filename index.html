@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instagram Feed con Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .nav-link i {
+            color: gray;
+        }
+        .nav-link.active i {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--Menu encabezado-->
+    <nav class="navbar navbar-light bg-light py-3">
+        <div class="container-fluid">
+            <div class="d-flex w-100 justify-content-between">
+                <div>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <h5 class="d-inline-block fs-5">Instagram</h5>
+                </div>
+                <div class="d-flex align-right justify-content-end">
+                    <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Create a new post
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Create a New Post</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <span>Caption:</span>
+                                    <textarea class="form-control mb-3" placeholder="Write your caption...">Add the caption of our post here</textarea>
+                                    <button type="button" class="btn btn-outline-secondary me-2">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success me-2">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--paginas de grid-->
+    <!--paginas del grid con iconos-->
+    <div class="container-fluid p-2">
+        <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><i class="fa-solid fa-square"></i></a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+
+            <!--Griddetresfotos-->
+            <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://c4.wallpaperflare.com/wallpaper/229/140/44/students-boys-girls-study-wallpaper-preview.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://wallpaperaccess.com/full/1149888.jpg" class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://c0.wallpaperflare.com/preview/28/977/291/smiling-woman-with-white-background.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.pinimg.com/originals/02/5c/ba/025cba8ce33ed90181ddc762e69141d5.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.pinimg.com/736x/af/03/e8/af03e8f301698efda8006b4da49ebf52.jpg" class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://wallpaperaccess.com/full/1447218.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://images7.alphacoders.com/122/1228014.png" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://img.freepik.com/foto-gratis/comunicacion-linea_1098-15842.jpg?t=st=1725764046~exp=1725767646~hmac=2768fc6d545c4f8321989b3645f6b32df9f36c91c1db8eae4097ab971f273433&w=1380" class="img-fluid w-100" alt=""></div>
+                </div>
+            </div>
+
+            <!--Griddeunafoto-->
+            <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">My Crazy dog Spark!</div>
+                            <medium class="align-bottom">08/26</medium>
+                        </div>
+                        <img style="object-fit: cover;" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>204 Likes</strong>
+                            <p>This is an example of a very good photo that you can post on instagram</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">The greatness of Croatia</div>
+                            <medium>04/09</medium>
+                        </div>
+                        <img style="object-fit: cover;" src="https://wallpaperaccess.com/full/1149888.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>26985 Likes</strong>
+                            <p>This is an example of a very good photo that you can post on instagram</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-6 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Amazing GOAL by Cristiano!</div>
+                            <medium>06/10</medium>
+                        </div>
+                        <img style="object-fit: cover;" src="https://i.pinimg.com/736x/af/03/e8/af03e8f301698efda8006b4da49ebf52.jpg" class="img-fluid w-100 col-12" alt=""/>
+                        <div class="p-2">
+                            <strong>204 Likes</strong>
+                            <p>This is an example of a very good photo that you can post on instagram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Final de Formato Bootstrap-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
